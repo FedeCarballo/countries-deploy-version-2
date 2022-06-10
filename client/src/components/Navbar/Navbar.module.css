@@ -1,0 +1,92 @@
+.Navbar_container{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.Navbar_container ul{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.Navbar_container ul li {
+    border: 0 3px 4px solid black;
+    list-style: none;
+    margin: 3vh;
+    padding: 15px;
+    font-size: 2.5vh;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+.Navbar_container nav{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+}
+.list{
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(253, 253, 253, 0);
+}
+.items{
+    margin-right: 20px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    transition: all .8s ease-in-out;
+}
+.items:hover{
+    cursor: pointer;
+    color: rgb(255, 0, 234);
+    text-decoration: underline rgb(255, 0, 234) 1px;
+}
+.btn{
+    display: none;
+    position: absolute;
+    top:1vh;
+    right: 10px;
+    padding: 10px;
+    font-size: #000;
+    font-size: 2vh;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+.img{
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .Navbar_container{
+        background-color: #fff;
+        margin: 0  0 2vh 0;
+    }
+    .Navbar_container ul {
+        background-color: rgb(255, 255, 255) !important;
+    }
+    .Navbar_container ul li{
+        background-color: rgba(0, 0, 0, 0);
+        color: rgb(0, 0, 0);
+    }
+    .list{
+        flex-direction: column;
+        height: auto;
+    }
+    .items:nth-child(1){
+        border-top: 1px solid rgba(255, 255, 255, 0.343);
+    }
+    .items{
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.326);
+        text-align: center;
+        margin-right: 0px;
+        padding: 20px 0;
+    }
+    .btn{
+        display: block;
+    }
+    .btn:hover{
+        cursor: pointer;
+    }
+}

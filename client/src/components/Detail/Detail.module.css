@@ -1,0 +1,229 @@
+
+.Detail_subcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} 
+/* Country details */
+.Country_Details{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2vh;
+    width: 25%;
+    backdrop-filter: brightness(.5);
+}
+.Country_Details p{
+    font-size: 3vh;
+    color: white;
+}
+.Country_Details a img{
+    width: 100%;
+    border-radius: 15px !important;
+}
+
+/* Detail Center */
+.Detail__div{
+    background-color:rgba(0, 0, 0, 0.132);
+    backdrop-filter: blur(2px);
+    width: 33%;
+    border-radius: 15px;
+    display: flex;
+    margin: 8vh auto;
+    align-self: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.Detail_div_text{
+    margin: auto;
+    width: 80%;
+    font-size: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+.Detail_div_text h1{
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.Detail__div img{
+    width: 80%;
+}
+
+/* Activities */
+.Activities_Details{
+    background-color: rgba(109, 109, 109, 0.229);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 3vh;
+    width: 25%;
+    border-radius: 20px;
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+}
+.Activities_Details_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.singleCountry_div{
+    padding: 5px;
+    text-align: center;
+    height: 550px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.singleCountry_div_text p{
+    margin: 15px 0;
+}
+.singleCountry_div_text span{
+    text-transform: uppercase;
+}
+
+.Activities_Details h2{
+    margin: 3.2vh 0;
+    font-size: 6vh;
+}
+
+.singleCountry_div img{
+    width: 100%;
+}
+.Activities__null{
+    padding: .5vh;
+}
+.Activities__null h3{
+    font-size: 2.5vh;
+}
+.Activities__null p{
+    margin: 2vh;
+    font-weight: bold;
+}
+/* Button */
+.button85 {
+    padding: 0.6em 1em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: rgba(17, 17, 17, 0.341);
+    font-size: 3vh;
+    cursor: pointer;
+    margin: 5vh 0;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  .button85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(34, 34, 34);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  @media screen and (max-width:700px) {
+    .Detail_subcontainer{
+        display: flex;
+        flex-direction: column;
+    } 
+    .Detail__div{
+        background-color:rgba(0, 0, 0, 0.132);
+        backdrop-filter: blur(2px);
+        width: 70%;
+        flex: 0;
+        border-radius: 15px;
+        display: flex;
+        margin: 8vh auto;
+        align-self: flex-end;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .Country_Details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2vh;
+        width: 70%;
+        flex: 1;
+        backdrop-filter: brightness(.8);
+    }
+    .Activities_Details{
+        background-color: rgba(109, 109, 109, 0.229);
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 3vh;
+        width: 70%;
+        border-radius: 20px;
+        color: white;
+        font-size: 3vh;
+        text-align: center;
+    }
+  }

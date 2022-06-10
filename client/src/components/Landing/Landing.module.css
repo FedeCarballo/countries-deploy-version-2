@@ -1,0 +1,223 @@
+.PrincipalContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    align-content: space-between;
+    background-color: white;
+}
+
+.ContainerLanding{
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.Title{
+  width: 80%;
+  text-align: center;
+}
+.Title h1{
+  margin: 3vh 0;
+  font-size: 8vh;
+  color: #00b7ff;
+  font-family: cursive;
+}
+.Title h1 span{
+  font-size: 10vh;
+  text-transform: uppercase;
+  color: #0075a3;
+}
+.Title h4{
+  width: 100%;
+  margin: 5vh auto;
+  font-size: 2vh;
+  font-family: cursive;
+}
+.ContainerLanding img{
+  width: 80%;
+  margin: 0 auto;
+}
+.button85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: rgba(17, 17, 17, 0.341);
+    font-size: 3vh;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  .button85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(34, 34, 34);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+.ContainerLinks{
+  background-image: url(../../assets/wallpaper2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 65%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.ContainerLinks .wave{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: url(../../assets/wave.png) no-repeat;
+}
+
+.SocialLinks{
+  width:20%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+svg{
+  width: 100vh;
+}
+.Author{
+  width: 80%;
+  margin:0 auto;
+  text-align: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: white;
+  font-size: 2vh;
+}
+
+@media screen and (max-width:700px) {
+  .PrincipalContainer{
+    background-image: url(../../assets/wallpaper2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .ContainerLanding{
+    background-image: url(../../assets/wallpaper2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Title{
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  .Title h1{
+    margin: 3vh 0;
+    font-size: 8vh;
+    color: #00b7ff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .Title h1 span{
+    font-size: 10vh;
+    text-transform: uppercase;
+    color: #0075a3;
+  }
+  .Title h4{
+    width: 100%;
+    margin: 5vh auto;
+    font-size: 3vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .ContainerLanding{
+    height: auto;
+  }
+  .ContainerLanding img{
+    display: none;
+  }
+  .ContainerLinks{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wave{
+    display: none !important;
+  }
+  .SocialLinks{
+    width:50%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .Author{
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    font-size: 2.5vh;
+  }
+  
+}

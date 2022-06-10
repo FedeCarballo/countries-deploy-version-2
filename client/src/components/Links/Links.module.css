@@ -1,0 +1,17 @@
+.Links_Div{
+    display: flex;
+    background-color: rgba(0, 255, 255, 0.072);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+}
+.Links_Div a{
+    transition: all .6s ease-in-out;
+}
+.Links_Div a img {
+    margin: 1vh 3vh;
+    width: 6vh;
+}
+
+.Links_Div a:hover {
+    transform: scale(1.2);
+}

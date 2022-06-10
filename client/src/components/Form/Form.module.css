@@ -1,0 +1,121 @@
+.Form__container{
+  background-color: rgba(162, 162, 162, 0.113);
+  backdrop-filter: blur(14px);
+  margin:60px auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border-radius: 15px;
+}
+.Form__container div{
+  text-align: center;
+  font-size: 2vh;
+  margin: 1.3vh 0;
+}
+
+.Formcreate{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+
+.checkbox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.checkbox input {
+  margin: 0 10px ;
+}
+.Formcreate label {
+  color:rgb(255, 255, 255);
+  font-size: 2.5vh;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.Formcreate input{
+  padding: 15px;
+  border-radius:14px;
+  border: none;
+  background-color: rgba(42, 42, 42, 0.479);
+}
+.Formcreate input::placeholder{
+  color: rgba(255, 255, 255, 0.342);
+}
+
+.Formcreate select {
+  background-color: rgba(42, 42, 42, 0.479);
+  color: #fff;
+  font-size: 3vh;
+  border-radius: 15px;
+  padding: 1vh;
+}
+.country_list{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.country_list div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 15px;
+  margin: 2vh auto;
+}
+.country_list li {
+  margin: 2vh 0;
+  padding: 1vh 0;
+  color: white;
+  font-size: 3vh; 
+}
+
+.country_list button{
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 15px;
+}
+
+
+.Formcreate .submit_button{
+  border: none;
+  width: 35%;
+  margin: 30px auto;
+  padding: 15px;
+  font-size: 2vh;
+  border-radius: 25px;
+  transition: all 800ms;
+}
+.Formcreate .submit_button:hover{
+  cursor:pointer;
+}
+
+.error_text{
+  color: rgb(255, 0, 0);
+  font-weight: 600;
+  text-align: center;
+}
+
+@media screen and (max-width:700px) {
+  .Form__container{
+    background-color: rgba(162, 162, 162, 0.113);
+    backdrop-filter: blur(14px);
+    margin:60px auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border-radius: 15px;
+  }
+  .Formcreate{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+  }
+}

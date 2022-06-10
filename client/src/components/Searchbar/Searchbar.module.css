@@ -1,0 +1,165 @@
+.Search{
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.Search div{
+    display: flex;
+    justify-content: space-around;
+}
+.OrderCountries{
+    margin-top: 2.5vh;
+    margin-bottom: 1vh;
+}
+.Search__filters{
+    align-self: center;
+}
+.Search__filters label, .OrderCountries label{
+    font-size: 2rem;
+    margin-right: 1vh;
+    color: white;
+}
+.Search__filters select,.OrderCountries select{
+    margin: 0 1vh;
+    background-color:rgba(0, 0, 0, 0.121);
+    backdrop-filter: blur(3px);
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 15px;
+    border: none;
+    font-style: italic;
+    cursor: pointer;
+}
+select option{
+    color: rgba(26, 25, 25, 0.603);
+    background-color:rgba(0, 0, 0, 0.121) !important;
+}
+
+.Search__search{
+    display: flex;
+    flex-direction: row;
+}
+
+.Search__search input{
+    justify-content: center;
+    background-color:rgba(0, 0, 0, 0.121);
+    display: flex;
+    padding: 1vh;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    width: 550px;
+    height:90%;
+    align-self: center;
+    border: none;
+    outline: none;
+    color: white;
+}
+.Search__search input::placeholder{
+    color: rgba(255, 255, 255, 0.302);
+    font-size: 2.2vh;
+}
+
+.Search__search input:placeholder-shown {
+    border-color: teal;
+    color: rgb(255, 2, 247);
+    font-style: italic;
+  }
+
+.Search div button{
+    background-color:rgba(0, 0, 0, 0.121);
+    margin: 0 2vh;
+    align-self: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px black;
+    transition: all .5s ease-in-out;
+}
+.Search div button:hover{
+    cursor: pointer;
+    background-color:rgba(255, 255, 255, 0.439);
+}
+
+.Search div button img{
+    width:60%;
+}
+
+@media screen and (max-width: 700px) {
+
+    .Search{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .Search__filters{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .Search div:first-child{
+        margin-top: 40px;
+        flex-direction: column-reverse;
+    }
+
+    .Search__filters select{
+        margin-top: 20px;
+    }
+    .Search div{
+        flex-direction: column;
+    }
+    .Search__filters label, .OrderCountries label{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-right: 1vh;
+        color: white;
+    }
+    .Search__filters select,.OrderCountries select{
+        margin: 1vh;
+        background-color:rgba(0, 0, 0, 0.121);
+        backdrop-filter: blur(3px);
+        color: white;
+        font-size: 1.2rem;
+        padding: 1rem;
+        border-radius: 15px;
+        border: none;
+        font-style: italic;
+        cursor: pointer;
+    }
+    .Search__search{
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center !important;
+    }
+    
+    .Search__search input{
+        justify-content: center;
+        background-color:rgba(255, 255, 255, 0.348);
+        display: flex;
+        padding: 1vh;
+        font-size: 1.5rem;
+        border-radius: 15px;
+        width: 60%;
+        align-self: center;
+        border: none;
+        outline: none;
+        color: white;
+    }
+
+    .Search div button{
+        background-color:rgba(255, 255, 255, 0.527);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px black;
+        transition: all .5s ease-in-out;
+    }
+    .OrderCountries{
+        width: 80%;
+        margin: 1vh auto;
+    }
+    select option{
+        width: 90% !important;
+    }
+}
