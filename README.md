@@ -8,11 +8,10 @@
   <img height="200" src="./countries.png" />
 </p>
 
-## Objetivos del Proyecto
+## About the Proyect
 
-- Construir una App utlizando React, Redux, Node y Sequelize.
-- Afirmar y conectar los conceptos aprendidos en la carrera.
-- Aprender mejores prácticas.
-- Aprender y practicar el workflow de GIT.
-- Usar y practicar testing.
+- Build an App using React, Redux, Node & Sequelize.
+- Affirm and connect the concepts learned in the bootcamp
+- Learn good practices.
+- Learn and practice the GIT workflow.
 
