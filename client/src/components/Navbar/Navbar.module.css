@@ -9,7 +9,6 @@
     background-color: rgba(0, 0, 0, 0) !important;
 }
 .Navbar_container ul li {
-    border: 0 3px 4px solid black;
     list-style: none;
     margin: 3vh;
     padding: 15px;
