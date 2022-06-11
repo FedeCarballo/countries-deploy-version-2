@@ -127,12 +127,9 @@ const validate = (values) => {
       dispatch(createActivity(input))
       swal({
         title:"activity created successfully",
-    },{buttons: ["Go to Activities"]}).then((willgo) => {
-      if (willgo) {
-          navigate('/countries')
-      }
+        timer:1000
     })
-    setinput({name:"", difficulty:"",duration:"",season:"",image:"", country: [] })
+    navigate("/countries")
   }
     s.preventDefault()
    }
