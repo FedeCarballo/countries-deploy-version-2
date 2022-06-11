@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { createActivity, getAllCountries} from '../../redux/actions'
 import Navbar from '../Navbar/Navbar'
+import swal from 'sweetalert'
 import {Form__container, Formcreate, Deletebutton, submit_button, country_list, error_text} from './Form.module.css'
 
 function Form() {
@@ -92,7 +93,11 @@ const validate = (values) => {
   function handleSelectcountry(c){
     c.preventDefault();
     if(Object.values(input.country).includes(c.target.value)){
-      alert("Country already selected")
+      swal({
+        title: "Country already selected",
+        icon: "error",
+        buttons: false,
+        timer: "1500"})
     }
     else{
         setinput({
@@ -119,10 +124,10 @@ const validate = (values) => {
     s.preventDefault();
     seterrors(validate(setinput))
     if(Object.keys(errors).length === 0 && isSubmit){
-      dispatch(createActivity(input)) 
-      alert("activity created successfully")
-      navigate('/countries/activities')
-    }
+      dispatch(createActivity(input))
+      swal({
+        title:"activity created successfully",
+    }).then(navigate('/countries/activities'))}
     s.preventDefault()
    }
 

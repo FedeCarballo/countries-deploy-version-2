@@ -1,11 +1,11 @@
 
 import { useDispatch, useSelector } from 'react-redux'
-import {filterCountriesByActivity, filterCountriesByContinent, Getinput, OrderByName, OrderByPopulation} from '../../redux/actions'
+import {filterCountriesByActivity, filterCountriesByContinent, Getinput, OrderByName} from '../../redux/actions'
 import {Search,Search__filters, Search__search, OrderCountries} from './Searchbar.module.css'
 import icon from '../../assets/search.svg'
 import { useState } from 'react'
 
-function Searchbar() {
+function Searchbar({paginate}) {
     const [name,setname] = useState('')
     const ActivitiesStatus = useSelector(state => state.activities)
     const dispatch = useDispatch()
@@ -21,10 +21,12 @@ function Searchbar() {
     //----------FILTERS----------//
     function handleFilterContinent(e){
         dispatch(filterCountriesByContinent(e.target.value))
+        paginate(1)
     }
 
     function handleFilterActivity(e){
         dispatch(filterCountriesByActivity(e.target.value))
+        paginate(1)
     }
 
     //----------FILTERS----------//
@@ -33,6 +35,7 @@ function Searchbar() {
 
     function handleOrder(e){
         dispatch(OrderByName(e.target.value))
+        paginate(1)
     }
     //-------ORDER FILTER-------//
   return (

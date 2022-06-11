@@ -45,6 +45,11 @@
   color: rgba(255, 255, 255, 0.342);
 }
 
+.Formcreate input{
+  color: white;
+  font-size: 2vh;
+}
+
 .Formcreate select {
   background-color: rgba(42, 42, 42, 0.479);
   color: #fff;

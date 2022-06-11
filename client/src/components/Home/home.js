@@ -47,7 +47,7 @@ function Home() {
         <Navbar />
         </div>
         <div className={Container}>
-        <Searchbar />
+        <Searchbar paginate={setcurrentpage} />
         <div className={button}>
         <button onClick={(e) => HandleOrder(e)} >
                 Order

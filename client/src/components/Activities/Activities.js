@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { deleteActivity, getAllActivities } from '../../redux/actions';
 import Navbar from '../Navbar/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 import {Activities_countries_container, Activities_container, Activities_delete, Activities_countries, Activities_Div,Activities__empty, button85, activity_image, div1,div2} from './Activities.module.css'
 
 
@@ -17,9 +18,24 @@ function Activities() {
     
   
     function handleDelete(e){
-      dispatch(deleteActivity(e))
-      alert('activity deleted successfully')
-      navigate('/countries')
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this activity!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          dispatch(deleteActivity(e))
+          swal({ 
+            title: "activity deleted successfully", 
+            timer: "800"
+          }).then( setTimeout(() =>{
+            navigate('/countries')
+          }, 800))
+        }
+      })
     }
 
   return (

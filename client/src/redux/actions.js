@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+import swal from 'sweetalert';
 //countries:
 export function getAllCountries(){
     return async (dispatch)=>{ 
@@ -24,7 +24,12 @@ export function Getinput(name){
             payload: res.data
         }))
         .catch(error => {
-            alert("Country/Continent not found");
+            swal({
+                text: "Country/Continent not found",
+                icon: "error",
+                buttons: false,
+                timer: "1500"}
+                );
             console.log(error);
         })
     }

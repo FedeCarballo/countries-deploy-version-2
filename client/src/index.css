@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.swal-overlay{
+  background-color: rgba(0, 0, 0, 0.211);
+}
+.swal-modal {
+  background-color: rgba(129, 129, 129, 0.322);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+.swal-text,.swal-title{
+  color: #fff;
+}
