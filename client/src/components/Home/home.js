@@ -50,7 +50,7 @@ function Home() {
         <Searchbar paginate={setcurrentpage} />
         <div className={button}>
         <button onClick={(e) => HandleOrder(e)} >
-                Order
+                Apply order
         </button>
         </div>
         {

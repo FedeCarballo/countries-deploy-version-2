@@ -43,9 +43,8 @@ function Searchbar({paginate}) {
         <div>
             {/* Filters */}
             <div className={Search__filters}>
-                <label>Filter countries By:</label>
                 <select onChange={e => handleFilterContinent(e)}>
-                    <option selected disabled value= "">Continent</option>
+                    <option selected disabled value= "">Filter countries by Continent</option>
                     <option value="All">All continents</option>
                     <option value="Africa">Africa</option>
                     <option value="Asia">Asia</option>
@@ -58,7 +57,7 @@ function Searchbar({paginate}) {
                 {
                 ActivitiesStatus.length>0 ?
                     <select onChange={e => handleFilterActivity(e)}>
-                        <option selected disabled>Activities</option>
+                        <option selected disabled>Filter countries by Activities</option>
                         <option value='All'>All</option>
                    { ActivitiesStatus.map(e =>
                         <option key={e.id} value={e.name}>
@@ -79,9 +78,8 @@ function Searchbar({paginate}) {
         <div>
         {/* Order filter */}
             <div className={OrderCountries}>
-                <label>Order countries By:</label>
                 <select onChange={e => handleOrder(e)}>
-                        <option selected disabled value=" ">Select One</option>
+                        <option selected disabled value=" ">Order by</option>
                         <option value="asc">A-Z</option>
                         <option value="desc">Z-A</option>
                         <option value="low">Population: low to high</option>

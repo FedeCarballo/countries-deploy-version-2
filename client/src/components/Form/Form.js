@@ -8,7 +8,7 @@ import {Form__container, Formcreate, Deletebutton, submit_button, country_list, 
 
 function Form() {
 
-    const [input, setinput] = useState({name:"", difficulty:"",duration:"",season:"",image:"", country: [] })
+    const [input, setinput] = useState({name:"", difficulty:"",duration:"",season:"",image:"", country: []})
     const [errors, seterrors] = useState({})
     const [isSubmit, setisSubmit] = useState(false)
 
@@ -127,7 +127,13 @@ const validate = (values) => {
       dispatch(createActivity(input))
       swal({
         title:"activity created successfully",
-    }).then(navigate('/countries/activities'))}
+    },{buttons: ["Go to Activities"]}).then((willgo) => {
+      if (willgo) {
+          navigate('/countries')
+      }
+    })
+    setinput({name:"", difficulty:"",duration:"",season:"",image:"", country: [] })
+  }
     s.preventDefault()
    }
 

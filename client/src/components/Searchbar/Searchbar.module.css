@@ -89,14 +89,14 @@ select option{
 @media screen and (max-width: 700px) {
 
     .Search{
-        width: 90%;
+        width: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;
     }
     .Search__filters{
         flex-direction: column;
-        margin-top: 20px;
+
     }
     .Search div:first-child{
         margin-top: 40px;
@@ -106,18 +106,10 @@ select option{
     .Search__filters select{
         margin-top: 20px;
     }
-    .Search div{
-        flex-direction: column;
-    }
-    .Search__filters label, .OrderCountries label{
-        font-size: 1.5rem;
-        text-align: center;
-        margin-right: 1vh;
-        color: white;
-    }
+
     .Search__filters select,.OrderCountries select{
         margin: 1vh;
-        background-color:rgba(0, 0, 0, 0.121);
+        background-color:rgba(0, 0, 0, 0.73);
         backdrop-filter: blur(3px);
         color: white;
         font-size: 1.2rem;
@@ -129,13 +121,12 @@ select option{
     }
     .Search__search{
         display: flex;
-        flex-direction: row !important;
         justify-content: center !important;
     }
     
     .Search__search input{
         justify-content: center;
-        background-color:rgba(255, 255, 255, 0.348);
+        background-color:rgba(255, 255, 255, 0.664);
         display: flex;
         padding: 1vh;
         font-size: 1.5rem;
@@ -144,9 +135,12 @@ select option{
         align-self: center;
         border: none;
         outline: none;
-        color: white;
+        color: rgb(0, 0, 0);
     }
+    .Search__search input::placeholder{
+        color: #000;
 
+    }
     .Search div button{
         background-color:rgba(255, 255, 255, 0.527);
         width: 50px;

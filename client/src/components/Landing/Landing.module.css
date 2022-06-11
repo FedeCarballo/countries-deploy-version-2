@@ -154,7 +154,7 @@ svg{
     width: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .ContainerLanding{
     background-image: url(../../assets/wallpaper2.jpg);
@@ -169,17 +169,19 @@ svg{
     width: 100%;
     text-align: center;
     color: white;
+    background-color: rgb(34, 34, 34,0.2);
+    backdrop-filter: blur(4px);
   }
   .Title h1{
     margin: 3vh 0;
     font-size: 8vh;
-    color: #00b7ff;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #f9f9f9;
+    font-family: 'Courier New', Courier, monospace;
   }
   .Title h1 span{
     font-size: 10vh;
     text-transform: uppercase;
-    color: #0075a3;
+    color: #939393;
   }
   .Title h4{
     width: 100%;
